@@ -8,6 +8,7 @@ class Milk extends CondimentDecorator {
         this.coffee = coffee;
     }
 
+    @Override
     public String getDescription() {
         return coffee.getDescription() + ", Milk";
     }

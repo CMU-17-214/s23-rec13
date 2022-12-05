@@ -8,6 +8,7 @@ public class Mocha extends CondimentDecorator {
         this.coffee = coffee;
     }
 
+    @Override
     public String getDescription() {
         return coffee.getDescription() + ", Mocha";
     }
