@@ -2,8 +2,6 @@ package edu.cmu.cs214.DecoratorPattern;
 
 public class DarkRoast extends Coffee{
 
-    private String description;
-
     public DarkRoast () {
         this.description = "Dark Roast";
     }
@@ -11,9 +9,5 @@ public class DarkRoast extends Coffee{
     @Override
     public double getCost() {
         return 7.0;
-    }
-
-    public String getDescription() {
-        return description;
     }
 }

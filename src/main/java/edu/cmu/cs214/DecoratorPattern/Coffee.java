@@ -2,10 +2,10 @@ package edu.cmu.cs214.DecoratorPattern;
 
 public abstract class Coffee {
 
-    private String description;
+    String description = "Sample Coffee";
 
-    public Coffee () {
-        this.description = "Sample Coffee";
+    public String getDescription() {
+        return description;
     }
 
     public abstract double getCost();
