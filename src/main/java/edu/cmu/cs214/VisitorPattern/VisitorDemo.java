@@ -16,14 +16,14 @@ public class VisitorDemo {
         // create document
         String text = "Welcome to ";
         String bold = "17514/214";
-        String link = "https://cmu-17-214.github.io/f2022/";
+        String link = "https://cmu-17-214.github.io/s2022/";
         Document doc = new Document();
         doc.addDocPart(new PlainText(text));
         doc.addDocPart(new BoldText(bold));
         doc.addDocPart(new Hyperlink("(website)", link));
 
-        writeFile(doc.toMarkDown(), "test.md");
-        writeFile(doc.toHTML(), "test.html");
+        writeFile(doc.accept(new MarkDownVisitor()), "test.md");
+        writeFile(doc.accept(new HtmlVisitor()), "test.html");
     }
 
     // helper method to write to file.
